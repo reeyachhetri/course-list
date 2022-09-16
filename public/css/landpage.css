@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background-color: #0A2558;;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+
+.container header i{
+    font-size: 85px;
+    padding-top: 4px;
+color: #17A2B8;
+min-width: 105px;
+text-align: right;
+}
+
+.brand {
+    padding-right: 781px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17A2B8;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #17A2B8;
+    border-color: #17A2B8;
+}
+
+.btn {
+
+    padding: 8px 17px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 86px;
+}
+
+.middle1 {
+    background-image: url(https://media.istockphoto.com/photos/library-picture-id530240223?k=20&m=530240223&s=612x612&w=0&h=9OgGNY6Ve5wMI3cBVO3jYkKN8T8WIHUEGTfkXZfOAG0=);
+    background-position: center;
+    height: 600px;
+    background-size: cover;
+    opacity: 0.65;
+    padding-top: 275px;
+    
+}
+
+.mid {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(251, 251, 251);
+    font-size: 28px;
+
+}
+
+.card-img-top {
+    border: solid 3px #17A2B8;
+}
+
+.middle2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 15px 45px 15px;
+    background-color: whitesmoke;;
+
+}
+
+.box img {
+    width: 100%;
+}
+
+.box {
+    width: 250px;
+    padding-top: 10px;
+}
+
+.box h3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.space {
+    margin-left: 0px;
+    margin-right: 7px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+footer li {
+    display: inline;
+    padding-left: 21px;
+
+
+}
+
+footer {
+    background-color: #0A2558;;
+    padding: 25px;
+    text-align: center;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
