@@ -40,20 +40,21 @@
                 </a>
             </li>
 
+
             <li>
                 <a href="{{route('faculty')}}">
                     <i class='bx bx-user'></i>
                     <span class="links_name">Faculty</span>
                 </a>
             </li>
+            
             <li>
                 <a href="#">
                     <i class='bx bx-message'></i>
                     <span class="links_name">Messages</span>
                 </a>
             </li>
-            
-
+           
             <li>
                 <a href="#">
                     <i class='bx bx-cog'></i>
@@ -94,42 +95,29 @@
         </nav>
 
         <div class="home-content">
-        <div class="button">
-                <a href="{{route('create')}}"><button class="btn">Add</button></a>
-            </div>
+        
 
             <div class="sales-boxes">
                 <div class="recent-sales box">
-                    <div class="title">Courses</div>
+                    <div class="title">Users List</div>
                     <table class="nav ">
 
                         <tr class="size">
-                        <th style="padding:10px 20px;">Courses</th>
-                            <th style="padding:10px 20px;">Teacher</th>
+                        
+                            <th style="padding:10px 20px;">Name</th>
+                            <th style="padding:10px 20px;">Email</th>
+                            <th style="padding:10px 20px;">Student ID</th>
                             <th style="padding:10px 20px;">Shift</th>
-                            <th style="padding:10px 20px;">Time</th>
-                            <th style="padding:10px 20px;">Price</th>
-                            <th style="padding:10px 20px;">Actions</th>
+                            <th style="padding:10px 20px;">Gender</th>
                         </tr>
-                        @foreach($courses as $course)
+                        @foreach($users as $user)
                         <tr>
-                            <td style="padding:10px 20px;">{{$course->course}}</td>
-                            <td style="padding:10px 20px;">{{$course->teacher}}</td>
-                            <td style="padding:10px 20px;">{{$course->shift}}</td>
-                            <td style="padding:10px 20px;">{{$course->time}}</td>
-                            <td style="padding:10px 20px;">{{$course->price}}</td>
-                            <td style="padding:10px 20px;">
-                                <a href="{{route('course.edit', $course->id)}}">
-                                    Edit
-                                </a>
-                                <a href="{{route('course.delete', $course->id)}}">
-                                    | Delete
-                                </a>
-                                <a href="#">
-                                    | View
-                                </a>
-
-                            </td>
+                            <td style="padding:10px 20px;">{{$user->name}}</td>
+                            <td style="padding:10px 20px;">{{$user->email}}</td>
+                            <td style="padding:10px 20px;">{{$user->student_id}}</td>
+                            <td style="padding:10px 20px;">{{$user->shift}}</td>
+                            <td style="padding:10px 20px;">{{$user->gender}}</td>
+                            
                         </tr>
                         @endforeach
                     </table>

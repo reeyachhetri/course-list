@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Login;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Admin\Course;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('landpage');
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view ('login.admin');
     }
 
     /**
@@ -47,8 +46,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        $course = Course::find($id);
-        return view('frontend.detail',compact('course'));
+        //
     }
 
     /**

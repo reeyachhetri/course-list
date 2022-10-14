@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/landpage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>Home</title>
 </head>
@@ -14,24 +14,30 @@
     <div class="container">
         <header>
         <i class='bx bxl-c-plus-plus size'></i>
-            <a href="#" class="brand">Courserio</a>
-            <a href="{{route('admin.login')}}" class="btn-primary btn space"> Login</a>
+            <a href="{{route('home')}}" class="brand">Courserio</a>
+            
         </header>
-
-        <section class="middle1">
         <div class="mid">
-                <h1>Generate more ideas with this course !</h1>
-            </div>
-        </section>
+        <h1>Details on Course</h1>
+        <div class="middle1">
+        <img class="card-img-top" src="{{asset('img/course.jpg')}}">
+        <br>
+        <h3 class={}>{{$course->course}}</h3>
+        <br>
+        <h4> Teacher : {{$course->teacher}} </h4>
+         <br>
+        <h4> Shift : {{$course->shift}} </h4>
+         <br>
+        <h4> Time : {{$course->time}} </h4>
+         <br>
+        <h4> Price : {{$course->price}} </h4>
+        </div>
+
+        
+        </div>
         
 
-        <section class="middle2">
-            <div class="box">
-                <img class="card-img-top" src="{{asset('img/course.jpg')}}">
-                <h3>{{$course->course}}</h3>
-                <a href="{{route('show', $course->id)}}" class="btn btn-primary">Details</a>
-            </div>
-            </section>
+       
         <footer>
             <div class="info">
                 <ul>
@@ -44,6 +50,7 @@
 
 
             </div>
+            .
         </footer>
 
     </div>

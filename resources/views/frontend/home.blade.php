@@ -14,8 +14,11 @@
     <div class="container">
         <header>
         <i class='bx bxl-c-plus-plus size'></i>
-            <a href="#" class="brand">Courserio</a>
-            <a href="{{route('login')}}" class="btn-primary btn space"> Login</a>
+        <ul>
+            <li><a href="#" class="brand">Courserio</a></li>
+           <li style="margin-left: -85px;"> <a href="{{route('user.login')}}" class="btn-primary btn space"> User </a></li>
+          <li>  <a href="{{route('admin.login')}}" class="btn-primary btn space"> Login</a></li>
+            </ul>
         </header>
 
         <section class="middle1">
@@ -29,7 +32,7 @@
             <div class="box">
                 <img class="card-img-top" src="{{asset('img/course.jpg')}}">
                 <h3>{{$course->course}}</h3>
-                <a href="button1" class="btn btn-primary">Details</a>
+                <a href="{{route('detail', $course->id)}}" class="btn btn-primary">Details</a>
             </div>
             @endforeach
             

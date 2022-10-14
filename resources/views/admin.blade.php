@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,9 +10,13 @@
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>Admin</title>
-</head>
+</head> --}}
 
-<body>
+
+
+
+
+{{-- <body>
     <div class="sidebar">
         <div class="logo-details">
 
@@ -33,6 +37,12 @@
                     <span class="links_name">Courses</span>
                 </a>
             </li>
+            <li>
+                <a href="{{route('admin.user')}}">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Users</span>
+                </a>
+            </li>
 
             <li>
                 <a href="{{route('faculty')}}">
@@ -46,6 +56,8 @@
                     <span class="links_name">Messages</span>
                 </a>
             </li>
+            
+            
 
             <li>
                 <a href="#">
@@ -60,8 +72,8 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <section class="home-section">
+    </div> --}}
+    {{-- <section class="home-section">
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
@@ -84,8 +96,10 @@
                 </div>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
+        @extends('layout.master')
+        @section('content')
         <div class="home-content">
             <div class="overview-boxes">
                 <div class="box">
@@ -196,9 +210,10 @@
             </div>
         </div>
     </section>
+    @endsection
 
 
 
-</body>
+{{-- </body>
 
-</html>
+</html> --}}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin\Course;
+use App\Http\Requests\CourseRequest;
 
 class CourseController extends Controller
 {
@@ -35,7 +36,7 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CourseRequest $request)
     {
         Course::create([
             'course' => $request->course_name,
@@ -67,7 +68,8 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::find($id);
+        return view('courses.edit', compact('course'));
     }
 
     /**
@@ -79,7 +81,15 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $course = Course::find($id);
+        $course->update([
+            'course' => $request->course_name,
+            'teacher' => $request->teacher,
+            'shift' => $request->shift,
+            'time'=> $request->time,
+            'price' => $request->price,
+        ]);
+        return redirect()->route('admin.course.index');
     }
 
     /**
@@ -90,6 +100,8 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $course = Course::find($id);
+        $course->delete();
+        return redirect()->route('admin.course.index');
     }
 }

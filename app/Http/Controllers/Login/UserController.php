@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Login;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class LoginController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        return view('login');
+        return view ('login.user');
     }
 
     /**
@@ -35,7 +36,23 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'id' => 'required',
+            
+        ],[
+            'name.required' => 'Please enter your name'
+            
+            
+        ]);
+        User::create([
+            'name'=> $request->name,
+            'email'=> $request->email,
+            'student_id'=>$request->id,
+            'shift'=>$request->shift,
+            'gender'=>$request->gender,
+        ]);
+        return redirect()->route('home');
     }
 
     /**
@@ -69,7 +86,7 @@ class LoginController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

@@ -21,12 +21,16 @@ header {
 }
 
 
+
 .container header i{
     font-size: 85px;
     padding-top: 4px;
 color: #17A2B8;
 min-width: 105px;
 text-align: right;
+}
+.container ul{
+    display: flex;
 }
 
 .brand {
@@ -97,7 +101,7 @@ text-align: right;
 }
 
 .space {
-    margin-left: 0px;
+    margin-left: -5px;
     margin-right: 7px;
 }
 
@@ -119,6 +123,7 @@ footer {
     text-align: center;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 290px;
 }
 
 a {

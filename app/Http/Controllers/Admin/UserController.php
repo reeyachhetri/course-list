@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Admin\Course;
+use App\Models\User;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('landpage');
+        $users= User::latest()->get();
+        return view('user', compact('users'));
+       
     }
 
     /**
@@ -25,7 +27,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -36,7 +38,7 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -47,8 +49,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        $course = Course::find($id);
-        return view('frontend.detail',compact('course'));
+        //
     }
 
     /**
