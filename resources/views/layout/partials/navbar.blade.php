@@ -9,17 +9,23 @@
             <i class='bx bx-search'></i>
         </div>
         <div class="profile-details">
-            
             <div class="dropdown">
-           
-            <a class="admin_name dropbtn">Admin</a>
-            <i class='bx bx-chevron-down'></i>
-            <div class="dropdown-content">
-                <a href="#">Settings</a>
-                <a href="#">Log out</a>
-                
-            </div>
+                <a class="admin_name dropbtn">Admin</a>
+                <i class='bx bx-chevron-down'></i>
+                <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-{{-- </section> --}}
+    {{--
+</section> --}}

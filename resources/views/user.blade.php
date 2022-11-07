@@ -47,14 +47,14 @@
                     <span class="links_name">Faculty</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="#">
                     <i class='bx bx-message'></i>
                     <span class="links_name">Messages</span>
                 </a>
             </li>
-           
+
             <li>
                 <a href="#">
                     <i class='bx bx-cog'></i>
@@ -87,7 +87,16 @@
                     <i class='bx bx-chevron-down'></i>
                     <div class="dropdown-content">
                         <a href="#">Settings</a>
-                        <a href="#">Log out</a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
 
                     </div>
                 </div>
@@ -95,7 +104,7 @@
         </nav>
 
         <div class="home-content">
-        
+
 
             <div class="sales-boxes">
                 <div class="recent-sales box">
@@ -103,7 +112,7 @@
                     <table class="nav ">
 
                         <tr class="size">
-                        
+
                             <th style="padding:10px 20px;">Name</th>
                             <th style="padding:10px 20px;">Email</th>
                             <th style="padding:10px 20px;">Student ID</th>
@@ -117,13 +126,13 @@
                             <td style="padding:10px 20px;">{{$user->student_id}}</td>
                             <td style="padding:10px 20px;">{{$user->shift}}</td>
                             <td style="padding:10px 20px;">{{$user->gender}}</td>
-                            
+
                         </tr>
                         @endforeach
                     </table>
                 </div>
             </div>
-            
+
 
         </div>
 

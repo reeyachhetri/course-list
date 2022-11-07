@@ -16,8 +16,8 @@
         <i class='bx bxl-c-plus-plus size'></i>
         <ul>
             <li><a href="#" class="brand">Courserio</a></li>
-           <li style="margin-left: -85px;"> <a href="{{route('user.login')}}" class="btn-primary btn space"> User </a></li>
-          <li>  <a href="{{route('admin.login')}}" class="btn-primary btn space"> Login</a></li>
+           <li style="margin-left: -85px;"> <a href="{{route('register')}}" class="btn-primary btn space"> User </a></li>
+          <li>  <a href="{{route('login')}}" class="btn-primary btn space"> Login</a></li>
             </ul>
         </header>
 

@@ -65,6 +65,9 @@
                     <i class='bx bx-log-out'></i>
                     <span class="links_name">Log out</span>
                 </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </li>
         </ul>
     </div>
@@ -86,7 +89,17 @@
                     <i class='bx bx-chevron-down'></i>
                     <div class="dropdown-content">
                         <a href="#">Settings</a>
-                        <a href="#">Log out</a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
 
                     </div>
                 </div>

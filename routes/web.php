@@ -42,3 +42,6 @@ Route::get('course/form', 'App\Http\Controllers\Admin\FormController@index')->na
 
 
 Route::get('/', 'App\Http\Controllers\Frontend\HomeController@home')->name('home');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
